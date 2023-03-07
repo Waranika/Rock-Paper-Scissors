@@ -37,38 +37,38 @@ void loop() {
  //if (Serial.available())
   //Serial
   
- //pwm.setPWM(15, 20, 200); //open
- //for (int i=200; i<600; i++) {
-   // pwm.setPWM(15, 20, i);
+ //pwm.setPWM(15, 0, 00); //open
+ //for (int i=00; i<600; i++) {
+   // pwm.setPWM(15, 0, i);
     //Serial.println(i);
   //} 
-  // pwm.setPWM(15, 20, 475); //closed
+  // pwm.setPWM(15, 0, 450); //closed
 }
 
 void S(){
-  pwm.setPWM(ann, 20, 475); 
-  pwm.setPWM(index, 20, 100); 
-  pwm.setPWM(major, 20, 100); 
-  pwm.setPWM(auri, 20, 475); 
-  pwm.setPWM(thumb, 20, 475);
+  pwm.setPWM(ann, 0, 450); 
+  pwm.setPWM(index, 0, 100); 
+  pwm.setPWM(major, 0, 100); 
+  pwm.setPWM(auri, 0, 450); 
+  pwm.setPWM(thumb, 0, 450);
   
 }
 
 void R(){
-  pwm.setPWM(ann, 20, 475); 
-  pwm.setPWM(index, 20, 475); 
-  pwm.setPWM(major, 20, 475); 
-  pwm.setPWM(auri, 20, 475); 
-  pwm.setPWM(thumb, 20, 475);
+  pwm.setPWM(ann, 0, 450); 
+  pwm.setPWM(index, 0, 450); 
+  pwm.setPWM(major, 0, 450); 
+  pwm.setPWM(auri, 0, 450); 
+  pwm.setPWM(thumb, 0, 450);
   
 }
 
 
 void P(){
-  pwm.setPWM(ann, 20, 100);
-  pwm.setPWM(index, 20, 100); 
-  pwm.setPWM(major, 20, 100); 
-  pwm.setPWM(auri, 20, 100); 
-  pwm.setPWM(thumb, 20, 100);
+  pwm.setPWM(ann, 0, 100);
+  pwm.setPWM(index, 0, 100); 
+  pwm.setPWM(major, 0, 100); 
+  pwm.setPWM(auri, 0, 100); 
+  pwm.setPWM(thumb, 0, 100);
   
 }
