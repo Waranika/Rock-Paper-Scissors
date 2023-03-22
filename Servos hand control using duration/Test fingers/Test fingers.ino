@@ -51,45 +51,20 @@ void setServoPulse(uint8_t n, double pulse) {
 
 void loop() {
 
-  while (Serial.available()) {
-    //delay(2);  //delay to allow byte to arrive in input buffer
-    c = Serial.read();
-    Serial.print(c);
-  
-  }
   // index = 11; major = 7; annulaire = 9; auriculaire = 13; thumbs 15;  
   
-  switch(c){
-    case 'R':
-      //Close the whole hand - Rock 
+  //Open the whole hand - Paper 
+  // setServoPulse(13, 0.0007);
+  // setServoPulse(15, 0.0007);
+  // setServoPulse(7, 0.0005);
+  // setServoPulse(9, 0.0005);
+  // setServoPulse(11, 0.0005);
+  
+  //Close
       setServoPulse(13, 0.0014);
-      setServoPulse(15, 0.0014);
+      setServoPulse(15, 0.0013);
       setServoPulse(7, 0.0014);
       setServoPulse(9, 0.0014);
-      setServoPulse(11, 0.0014);
-      break;
-    case 'S':
-      // Scissors
-      setServoPulse(11, 0.0005);
-      setServoPulse(9, 0.0014);
-      setServoPulse(7, 0.0005);
-      setServoPulse(13, 0.0014);
-      setServoPulse(15, 0.0014);
-      break;
-    
-    case 'P': 
-      //Open the hand - paper
-      setServoPulse(13, 0.0005);
-      setServoPulse(15, 0.0005);
-      setServoPulse(7, 0.0005);
-      setServoPulse(9, 0.0005);
-      setServoPulse(11, 0.0005);
-      break;
-
-  }
-  
-
-  
-
+      setServoPulse(11, 0.0013);
   
 }
