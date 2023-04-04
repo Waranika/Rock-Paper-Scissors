@@ -23,7 +23,7 @@ uint8_t servonum = 0;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Type input");
+  //Serial.println("Type input");
 
   pwm.begin();
   
@@ -40,12 +40,12 @@ void setServoPulse(uint8_t n, double pulse) {
   
   pulselength = 1000000;   // 1,000,000 us per second
   pulselength /= SERVO_FREQ;   // Analog servos run at ~60 Hz updates
-  Serial.print(pulselength); Serial.println(" us per period"); 
+  //Serial.print(pulselength); Serial.println(" us per period"); 
   pulselength /= 4096;  // 12 bits of resolution
-  Serial.print(pulselength); Serial.println(" us per bit"); 
+  //Serial.print(pulselength); Serial.println(" us per bit"); 
   pulse *= 1000000;  // convert input seconds to us
   pulse /= pulselength;
-  Serial.println(pulse);
+  //Serial.println(pulse);
   pwm.setPWM(n, 0, pulse);
 }
 
@@ -54,13 +54,13 @@ void loop() {
   while (Serial.available()) {
     //delay(2);  //delay to allow byte to arrive in input buffer
     c = Serial.read();
-    Serial.print(c);
+    //Serial.print(c);
   
   }
   // index = 11; major = 7; annulaire = 9; auriculaire = 13; thumbs 15;  
   
   switch(c){
-    case 'R':
+    case 'S':
       //Close the whole hand - Rock 
       setServoPulse(13, 0.0014);
       setServoPulse(15, 0.0014);
@@ -68,7 +68,7 @@ void loop() {
       setServoPulse(9, 0.0014);
       setServoPulse(11, 0.0014);
       break;
-    case 'S':
+    case 'P':
       // Scissors
       setServoPulse(11, 0.0005);
       setServoPulse(9, 0.0014);
@@ -77,7 +77,7 @@ void loop() {
       setServoPulse(15, 0.0014);
       break;
     
-    case 'P': 
+    case 'R': 
       //Open the hand - paper
       setServoPulse(13, 0.0005);
       setServoPulse(15, 0.0005);
