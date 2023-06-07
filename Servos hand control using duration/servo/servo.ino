@@ -21,12 +21,15 @@ char c;
 // our servo # counter
 uint8_t servonum = 0;
 
+long int myTime1;
+long int myTime2;
 void setup() {
   Serial.begin(9600);
   //Serial.println("Type input");
 
   pwm.begin();
   
+
   pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(SERVO_FREQ);  // Analog servos run at ~50 Hz updates
 
@@ -51,10 +54,13 @@ void setServoPulse(uint8_t n, double pulse) {
 
 void loop() {
 
+ // myTime = millis();
+
   while (Serial.available()) {
     //delay(2);  //delay to allow byte to arrive in input buffer
     c = Serial.read();
     //Serial.print(c);
+    
   
   }
   // index = 11; major = 7; annulaire = 9; auriculaire = 13; thumbs 15;  
@@ -62,28 +68,37 @@ void loop() {
   switch(c){
     case 'S':
       //Close the whole hand - Rock 
+      myTime1 = millis();
       setServoPulse(13, 0.0014);
       setServoPulse(15, 0.0014);
       setServoPulse(7, 0.0014);
       setServoPulse(9, 0.0014);
       setServoPulse(11, 0.0014);
+      myTime2 = millis();
+      //Serial.println(myTime2-myTime1);
       break;
     case 'P':
       // Scissors
+      myTime1 = millis();
       setServoPulse(11, 0.0005);
       setServoPulse(9, 0.0014);
       setServoPulse(7, 0.0005);
       setServoPulse(13, 0.0014);
       setServoPulse(15, 0.0014);
+      myTime2 = millis();
+      //Serial.println(myTime2-myTime1);
       break;
     
     case 'R': 
       //Open the hand - paper
+      myTime1 = millis();
       setServoPulse(13, 0.0005);
       setServoPulse(15, 0.0005);
       setServoPulse(7, 0.0005);
       setServoPulse(9, 0.0005);
       setServoPulse(11, 0.0005);
+      myTime2 = millis();
+      //Serial.println(myTime2-myTime1);
       break;
 
   }
