@@ -123,4 +123,5 @@ There are several types of PWM shield controllers available for Arduino, with va
 
 ## Results
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7051266217474412545?collapsed=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+[[<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7051266217474412545?collapsed=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+](https://www.linkedin.com/posts/elijah-ki-zerbo-a00484198_ai-machinelearning-mediapipe-activity-7051266229860200448-PIAu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC5YGKABJ_CFfAcqdaFzM5Zayex6DFq2SaI)](https://www.linkedin.com/posts/elijah-ki-zerbo-a00484198_ai-machinelearning-mediapipe-activity-7051266229860200448-PIAu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC5YGKABJ_CFfAcqdaFzM5Zayex6DFq2SaI)
